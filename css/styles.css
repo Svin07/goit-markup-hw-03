@@ -29,6 +29,8 @@ ul {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 body {
@@ -106,6 +108,19 @@ body {
   letter-spacing: 0.02em;
   color: var(--text-color);
 }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 /* Main */
 
 .hero {
@@ -149,6 +164,8 @@ body {
   color: var(--dark-color);
 }
 .advantages-list {
+  display: flex;
+  gap: 24px;
 }
 
 .advantages-list-name {
@@ -157,6 +174,8 @@ body {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--dark-color);
+  margin-bottom: 8px;
+  width: calc((100% - 72) / 4);
 }
 .advantages-list-text {
   font-size: 16px;
@@ -165,6 +184,7 @@ body {
   color: var(--text-color);
 }
 .works {
+  padding-bottom: 120px;
 }
 
 .works-title {
@@ -174,8 +194,11 @@ body {
   letter-spacing: 0.02em;
   text-transform: capitalize;
   color: var(--dark-color);
+  padding-bottom: 72px;
 }
 .works-list {
+  display: flex;
+  gap: 24px;
 }
 
 .works-list-picture {
@@ -191,25 +214,36 @@ body {
   letter-spacing: 0.02em;
   text-transform: capitalize;
   color: var(--dark-color);
+  padding-bottom: 72px;
 }
 .team-list {
+  display: flex;
+  gap: 24px;
 }
 
 .team-list-picture {
   background-color: var(--light-background);
+  width: calc((100% - 72px) / 4);
 }
 .team-list-name {
   font-weight: 500;
   font-size: 20px;
+  text-align: center;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--dark-color);
 }
 .team-list-text {
   font-size: 16px;
+  text-align: center;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--text-color);
+  margin-top: 8px;
+}
+
+.team-card-sign {
+  padding: 32px 16px;
 }
 
 /* FOOTER */
@@ -226,6 +260,7 @@ body {
   letter-spacing: 0.02em;
   color: var(--another-background);
   margin-top: 16px;
+  width: 264px;
 }
 
 /* Portfolio */
@@ -242,6 +277,7 @@ body {
   color: var(--dark-color);
 }
 .filters-list {
+  display: flex;
 }
 
 .filters-item {
@@ -264,6 +300,17 @@ body {
   letter-spacing: 0.02em;
   color: var(--dark-color);
   margin-top: 72px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px 24px;
+}
+
+.projects-list li {
+  width: calc((100% - 48px) / 3);
+}
+
+.project-card {
+  border: 1px solid #e7e9fc;
 }
 .projects-name {
   font-weight: 500;
@@ -282,4 +329,9 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--text-color);
+  margin-top: 8px;
+}
+
+.portfolio-card-sign {
+  padding: 32px 16px;
 }
